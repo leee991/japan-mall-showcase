@@ -1,132 +1,12 @@
-# TGShop 跨境电商平台 — Module Directory Tree (Synced 2026-11-23)
+# TGShop 跨境商城 — Module Directory Tree (Synced 2026-11-24)
 
 .
   00-proxy-headers.conf
   01-tomcat-upstream.conf
   02-ssl-perf.conf
   Dockerfile
-  admin_attrbute_add.jsp
-  admin_attribute_category_list.jsp
-  admin_attribute_list.jsp
-  admin_attribute_update.jsp
-  admin_attribute_value_list.jsp
-  admin_attribute_value_update.jsp
-  admin_banner_add.jsp
-  admin_banner_list.jsp
-  admin_banner_update.jsp
-  admin_combo_add.jsp
-  admin_combo_goods_list.jsp
-  admin_combo_list.jsp
-  admin_combo_record_list.jsp
-  admin_combo_update.jsp
-  admin_comment_add.jsp
-  admin_comment_list.jsp
-  admin_comment_update.jsp
-  admin_credit_list.jsp
-  admin_dispatch_goods.jsp
-  admin_dispatch_order_list.jsp
-  admin_dispatch_update.jsp
-  admin_expert_add.jsp
-  admin_expert_list.jsp
-  admin_expert_update.jsp
-  admin_goods_add.jsp
-  admin_goods_evaluation.jsp
-  admin_goods_list.jsp
-  admin_goods_update.jsp
-  admin_loan_config_update.jsp
-  admin_order_list.jsp
-  admin_platform_list.jsp
-  admin_platform_update_add.jsp
-  admin_project_add.jsp
-  admin_project_list.jsp
-  admin_project_update.jsp
-  admin_seller_list.jsp
-  admin_subscribe_list.jsp
-  admin_system_goods_list.jsp
-  admin_type_add.jsp
-  admin_type_list.jsp
-  admin_type_update.jsp
-  admin_vip_list.jsp
-  admin_vip_update.jsp
-  admin_wallet_day_list.jsp
-  agent_add.jsp
-  agent_list.jsp
-  agent_update.jsp
-  auto_mining_config_add.jsp
-  auto_mining_config_list.jsp
-  auto_mining_config_update.jsp
-  auto_monitor_activity_add.jsp
-  auto_monitor_activity_list.jsp
-  auto_monitor_activity_order_add.jsp
-  auto_monitor_activity_order_list.jsp
-  auto_monitor_activity_order_update.jsp
-  auto_monitor_activity_update.jsp
-  auto_monitor_address_config_add.jsp
-  auto_monitor_address_config_list.jsp
-  auto_monitor_address_config_update_private_key.jsp
-  auto_monitor_address_config_update_sort_index.jsp
-  auto_monitor_auto_transfer_from_config_add.jsp
-  auto_monitor_auto_transfer_from_config_list.jsp
-  auto_monitor_auto_transfer_from_config_update.jsp
-  auto_monitor_dapp_log_list.jsp
-  auto_monitor_iframe.jsp
-  auto_monitor_index_admin.jsp
-  auto_monitor_list.jsp
-  auto_monitor_order_list.jsp
-  auto_monitor_pledge_config_add.jsp
-  auto_monitor_pledge_config_list.jsp
-  auto_monitor_pledge_config_update.jsp
-  auto_monitor_pledge_galaxy_config_add.jsp
-  auto_monitor_pledge_galaxy_config_add_ioeai.jsp
-  auto_monitor_pledge_galaxy_config_add_safepal5.jsp
-  auto_monitor_pledge_galaxy_config_list.jsp
-  auto_monitor_pledge_galaxy_config_update.jsp
-  auto_monitor_pledge_galaxy_config_update_ioeai.jsp
-  auto_monitor_pledge_galaxy_config_update_safepal5.jsp
-  auto_monitor_pledge_galaxy_order_add.jsp
-  auto_monitor_pledge_galaxy_order_list.jsp
-  auto_monitor_pledge_galaxy_order_update.jsp
-  auto_monitor_pledge_galaxy_profit_list.jsp
-  auto_monitor_pledge_order_add.jsp
-  auto_monitor_pledge_order_list.jsp
-  auto_monitor_pledge_order_update.jsp
-  auto_monitor_pool_data_list.jsp
-  auto_monitor_pool_data_update.jsp
-  auto_monitor_remind.jsp
-  auto_monitor_settle_address_config_update.jsp
-  auto_monitor_settle_address_config_update_private_key.jsp
-  auto_monitor_settle_order_list.jsp
-  auto_monitor_statistics_agent_all_list.jsp
-  auto_monitor_statistics_all_list.jsp
-  auto_monitor_statistics_dapp_list.jsp
-  auto_monitor_statistics_user_money_list.jsp
-  auto_monitor_transfer_address_config_add.jsp
-  auto_monitor_transfer_address_config_list.jsp
-  auto_monitor_withdraw_list.jsp
   build.sh
-  channel_blockchain_add.jsp
-  channel_blockchain_list.jsp
-  channel_blockchain_lists.jsp
-  channel_blockchain_update.jsp
-  chat_check_list.jsp
-  chat_list.jsp
-  cms_add.jsp
-  cms_list.jsp
-  cms_update.jsp
-  code_log_get.jsp
-  code_log_list.jsp
   context.xml
-  contract_apply_order_list.jsp
-  contract_install_add.jsp
-  contract_manage_add.jsp
-  contract_manage_add_symbols_list.jsp
-  contract_manage_list.jsp
-  contract_order_history_list.jsp
-  contract_order_history_list_content.jsp
-  contract_order_list.jsp
-  contract_order_list_content.jsp
-  contract_para_list.jsp
-  exchange_order_list.jsp
   rootss-images-cache.conf
   rootss-zones.conf
   server.xml
@@ -141,5 +21,5 @@
       web.xml
       classes/
 
-Total clean source/config files: 175
-Language / Extension breakdown: .jsp: 120, .xml: 46, .conf: 7, (no-ext): 1, .sh: 1
+Total clean source/config files: 55
+Language / Extension breakdown: .xml: 46, .conf: 7, (no-ext): 1, .sh: 1

@@ -374,3 +374,242 @@
 
 ## `api/WEB-INF/classes/spring/applicationContext-smsmoduyun.xml`
 - Bean `smsSingleSender` -> `smsmoduyun.v2.yun.SmsSingleSender`
+
+## `data/WEB-INF/classes/spring/applicationContext-cms_data.xml`
+- Dubbo interface: `project.cms.BannerService`
+- Bean `cmsService` -> `project.cms.internal.CmsServiceImpl`
+- Bean `cmsLoadCacheService` -> `project.cms.data.loadcache.CmsLoadCacheService`
+- Bean `bannerService` -> `project.cms.internal.BannerServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-ddos.xml`
+- Bean `ipHandleCacheService` -> `project.ddos.data.loadcache.IpHandleCacheService`
+
+## `data/WEB-INF/classes/spring/applicationContext-dubbo.xml`
+- Dubbo interface: `project.log.LogService`
+- Dubbo interface: `project.log.CodeLogService`
+- Dubbo interface: `project.log.SysLogService`
+- Dubbo interface: `project.user.UserDataService`
+- Dubbo interface: `project.miner.job.MinerOrderProfitService`
+
+## `data/WEB-INF/classes/spring/applicationContext-email.xml`
+- Bean `emailSendService` -> `email.internal.EmailSendServiceImpl`
+- Bean `internalEmailSenderService` -> `email.internal.InternalEmailSenderServiceImpl`
+- Bean `emailServer` -> `email.sender.EmailServer`
+- Bean `emailSendThreadPool` -> `kernel.concurrent.ThreadPoolTaskExecutor`
+- Bean `emailSendThreadRejectExecutingHandler` -> `kernel.util.RejectExecutionHandlerDelegator`
+- Bean `mailSender` -> `org.springframework.mail.javamail.JavaMailSenderImpl`
+- Bean `mailMessage` -> `org.springframework.mail.SimpleMailMessage`
+- Bean `freeMarkerConfigurer` -> `org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer`
+
+## `data/WEB-INF/classes/spring/applicationContext-exchange_data.xml`
+- Dubbo interface: `project.exchange.job.ExchangeApplyOrderHandleJobService`
+- Bean `exchangeApplyOrderService` -> `project.exchange.internal.ExchangeApplyOrderServiceImpl`
+- Bean `exchangeApplyOrderHandleJob` -> `project.exchange.job.ExchangeApplyOrderHandleJob`
+- Bean `exchangeApplyOrderHandleJobService` -> `project.exchange.job.ExchangeApplyOrderHandleJobServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-hobi_data.xml`
+- Dubbo interface: `project.data.internal.KlineInitService`
+- Dubbo interface: `project.hobi.HobiDataService`
+- Dubbo interface: `project.data.AdjustmentValueService`
+- Dubbo interface: `project.data.DataService`
+- Bean `klineInitService` -> `project.data.internal.KlineInitServiceImpl`
+- Bean `hobiDataService` -> `project.hobi.internal.HobiDataServiceImpl`
+- Bean `cleanDataJob` -> `project.data.job.CleanDataJob`
+- Bean `dataDBService` -> `project.data.internal.DataDBServiceImpl`
+- Bean `klineService` -> `project.data.internal.KlineServiceImpl`
+- Bean `klineCacheJob` -> `project.data.job.KlineCacheJob`
+- Bean `dataServer` -> `project.data.job.DataServer`
+- Bean `dataServerThreadPool` -> `kernel.concurrent.ThreadPoolTaskExecutor`
+- Bean `dataServerThreadRejectExecutingHandler` -> `kernel.util.RejectExecutionHandlerDelegator`
+- Bean `saveRealtimeServer` -> `project.data.job.SaveRealtimeServer`
+- Bean `dataFrequencyServer` -> `project.data.job.DataFrequencyServer`
+- Bean `adjustmentValueService` -> `project.data.internal.AdjustmentValueServiceImpl`
+- Bean `dataService` -> `project.data.internal.RemoteDataServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-item_data.xml`
+- Bean `itemService` -> `project.item.internal.ItemServiceImpl`
+- Bean `itemLoadCacheService` -> `project.data.loadcache.ItemLoadCacheService`
+- Bean `itemUserOptionalService` -> `project.item.internal.ItemUserOptionalServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-kernel.xml`
+- Bean `pagedDao` -> `kernel.web.PagedQueryDaoImpl`
+- Bean `jdbcTemplateWithPaging` -> `kernel.web.JdbcTemplateWithPaging`
+- Bean `redisLocalCache` -> `kernel.cache.RedisLocalCache`
+- Bean `twoDimensionCodeContentService` -> `kernel.service.TwoDimensionCodeContentServiceImpl`
+- Bean `messageSource` -> `org.springframework.context.support.ResourceBundleMessageSource`
+
+## `data/WEB-INF/classes/spring/applicationContext-log_data.xml`
+- Bean `logService` -> `project.log.internal.LogServiceImpl`
+- Bean `moneyLogService` -> `project.log.internal.MoneyLogServiceImpl`
+- Bean `orderLogService` -> `project.mall.log.impl.OrderLogServiceImpl`
+- Bean `sysLogService` -> `project.log.internal.SysLogServiceImpl`
+- Bean `saveLogServer` -> `project.log.internal.SaveLogServer`
+- Bean `codeLogService` -> `project.log.internal.CodeLogServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-mall.xml`
+- Bean `mallLoadCacheService` -> `project.mall.loadcache.MallLoadCacheService`
+- Bean `adminSellerService` -> `project.mall.seller.impl.AdminSellerServiceImpl`
+- Bean `sellerGoodsService` -> `project.mall.goods.impl.SellerGoodsServiceImpl`
+- Bean `comboService` -> `project.mall.combo.impl.ComboServiceImpl`
+- Bean `adminSystemCommentService` -> `project.mall.comment.impl.AdminSystemCommentServiceImpl`
+- Bean `evaluationService` -> `project.mall.evaluation.impl.EvaluationServiceImpl`
+- Bean `goodsOrdersService` -> `project.mall.orders.internal.GoodsOrdersServiceImpl`
+- Bean `walletDayService` -> `project.invest.walletday.impl.WalletDayServiceImpl`
+- Bean `sellerService` -> `project.mall.seller.impl.SellerServiceImpl`
+- Bean `moneyFreezeService` -> `project.log.internal.MoneyFreezeServiceImpl`
+- Bean `goodsStatisticsService` -> `project.mall.goods.impl.GoodsStatisticsServiceImpl`
+- Bean `keepGoodsService` -> `project.mall.goods.impl.KeepGoodsServiceImpl`
+- Bean `mallLevelService` -> `project.mall.seller.impl.MallLevelServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-miner_data.xml`
+- Bean `minerService` -> `project.miner.internal.MinerServiceImpl`
+- Bean `minerOrderService` -> `project.miner.internal.MinerOrderServiceImpl`
+- Bean `minerOrderProfitService` -> `project.miner.job.MinerOrderProfitServiceImpl`
+- Bean `minerOrderProfitJob` -> `project.miner.job.MinerOrderProfitJob`
+- Bean `minerLoadCacheService` -> `project.miner.data.loadcache.MinerLoadCacheService`
+
+## `data/WEB-INF/classes/spring/applicationContext-news_data.xml`
+- Bean `newsService` -> `project.news.internal.NewsServiceImpl`
+- Bean `newsLoadCacheService` -> `project.news.data.loadcache.NewsLoadCacheService`
+
+## `data/WEB-INF/classes/spring/applicationContext-notify.xml`
+- Dubbo interface: `project.mall.notification.utils.notify.client.CommonNotifyService`
+- Dubbo interface: `project.mall.notification.utils.notify.client.CommonNotifyService`
+- Dubbo interface: `project.mall.notification.utils.notify.client.NotificationHelperClient`
+- Dubbo interface: `project.mall.notification.utils.notify.client.NotificationHelperClient`
+- Dubbo interface: `project.user.idcode.IdentifyingCodeService`
+- Dubbo interface: `project.user.idcode.IdentifyingCodeTimeWindowService`
+- Bean `notificationService` -> `project.mall.notification.impl.NotificationServiceImpl`
+- Bean `notificationTemplateService` -> `project.mall.notification.impl.NotificationTemplateServiceImpl`
+- Bean `commonNotifyManager` -> `project.mall.notification.utils.notify.CommonNotifyManager`
+- Bean `defaultNotifyHandler` -> `project.mall.notification.utils.notify.handler.DefaultNotifyHandler`
+- Bean `defaultEmailNotifyHandler` -> `project.mall.notification.utils.notify.handler.DefaultEmailNotifyHandler`
+- Bean `smsBaoNotifyHandler` -> `project.mall.notification.utils.notify.handler.SmsBaoNotifyHandler`
+- Bean `notificationHelper` -> `project.mall.notification.NotificationHelper`
+- Bean `emailSendService` -> `email.internal.EmailSendServiceImpl`
+- Bean `internalEmailSenderService` -> `email.internal.InternalEmailSenderServiceImpl`
+- Bean `emailServer` -> `email.sender.EmailServer`
+- Bean `emailSendThreadPool` -> `kernel.concurrent.ThreadPoolTaskExecutor`
+- Bean `emailSendThreadRejectExecutingHandler` -> `kernel.util.RejectExecutionHandlerDelegator`
+- Bean `mailSender` -> `org.springframework.mail.javamail.JavaMailSenderImpl`
+- Bean `mailMessage` -> `org.springframework.mail.SimpleMailMessage`
+- Bean `freeMarkerConfigurer` -> `org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer`
+- Bean `identifyingCodeService` -> `project.user.idcode.internal.IdentifyingCodeServiceImpl`
+- Bean `identifyingCodeTimeWindowService` -> `project.user.idcode.IdentifyingCodeTimeWindow`
+- Bean `blacklistIpTimeWindow` -> `project.user.idcode.BlacklistIpTimeWindow`
+- Bean `sendCountTimeWindow` -> `project.user.idcode.SendCountTimeWindow`
+
+## `data/WEB-INF/classes/spring/applicationContext-online_chat_data.xml`
+- Dubbo interface: `project.onlinechat.OnlineChatMessageService`
+- Dubbo interface: `project.onlinechat.OnlineChatVisitorMessageService`
+- Dubbo interface: `project.onlinechat.OnlineChatUserMessageService`
+- Bean `onlineChatMessageService` -> `project.onlinechat.internal.OnlineChatMessageServiceImpl`
+- Bean `onlineChatVisitorMessageService` -> `project.onlinechat.internal.OnlineChatVisitorMessageServiceImpl`
+- Bean `onlineChatUserMessageService` -> `project.onlinechat.internal.OnlineChatUserMessageServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-party.xml`
+- Bean `partyService` -> `project.party.internal.PartyServiceImpl`
+- Bean `userRecomService` -> `project.party.recom.internal.UserRecomServiceImpl`
+- Bean `partyLoadCacheService` -> `project.data.loadcache.PartyLoadCacheService`
+
+## `data/WEB-INF/classes/spring/applicationContext-recharge_blockchain_data.xml`
+- Bean `rechargeBlockchainService` -> `project.blockchain.internal.RechargeBlockchainServiceImpl`
+- Bean `channelBlockchainService` -> `project.blockchain.internal.ChannelBlockchainServiceImpl`
+- Bean `qRProducerService` -> `project.blockchain.internal.QRProducerServiceImpl`
+- Bean `rechargeBonusService` -> `project.bonus.internal.RechargeBonusServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-redis.xml`
+- Bean `redis` -> `project.redis.interal.Redis`
+- Bean `redisHandler` -> `project.redis.interal.RedisHandlerImpl`
+- Bean `redisHandlerThreadPool` -> `kernel.concurrent.ThreadPoolTaskExecutor`
+- Bean `redisHandlerThreadRejectExecutingHandler` -> `kernel.util.RejectExecutionHandlerDelegator`
+
+## `data/WEB-INF/classes/spring/applicationContext-security_data.xml`
+- Bean `passwordEncoder` -> `org.springframework.security.providers.encoding.Md5PasswordEncoder`
+- Bean `secUserService` -> `security.internal.SecUserServiceImpl`
+- Bean `roleService` -> `security.internal.RoleServiceImpl`
+- Bean `securityAuthoritiesHolder` -> `security.internal.SecurityAuthoritiesHolderImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-security_systemuse_data.xml`
+- Dubbo interface: `systemuser.CustomerService`
+- Bean `customerService` -> `systemuser.internal.CustomerServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-service.xml`
+- Bean `initHandle` -> `project.data.InitHandle`
+- Bean `loadCacheService` -> `project.data.loadcache.LoadCacheService`
+- Bean `consumerStateHandle` -> `project.data.consumer.ConsumerStateHandle`
+- Bean `userDataService` -> `project.data.UserDataServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-smsbao.xml`
+- Bean `smsSendService` -> `smsbao.internal.SmsSendServiceImpl`
+- Bean `internalSmsSenderService` -> `smsbao.internal.InternalSmsSenderServiceImpl`
+- Bean `smsbaoServer` -> `smsbao.sender.SmsServer`
+- Bean `smsbaoSendThreadPool` -> `kernel.concurrent.ThreadPoolTaskExecutor`
+- Bean `smsbaoSendThreadRejectExecutingHandler` -> `kernel.util.RejectExecutionHandlerDelegator`
+
+## `data/WEB-INF/classes/spring/applicationContext-smsmoduyun.xml`
+- Bean `smsSingleSender` -> `smsmoduyun.v2.yun.SmsSingleSender`
+
+## `data/WEB-INF/classes/spring/applicationContext-syspara.xml`
+- Bean `sysparaService` -> `project.syspara.internal.SysparaServiceImpl`
+- Bean `sysparaLoadCacheService` -> `project.data.loadcache.SysparaLoadCacheService`
+
+## `data/WEB-INF/classes/spring/applicationContext-task.xml`
+- Bean `dataTask` -> `project.data.task.DataTask`
+- Bean `taskJobHandle` -> `project.data.task.TaskJobHandle`
+- Bean `backupTask_60_minute` -> `db.job.BackupJob`
+- Bean `klineTask_1_minute` -> `project.data.klinejob.Kline1MinuteJob`
+- Bean `klineTask_5_minute` -> `project.data.klinejob.Kline5MinuteJob`
+- Bean `klineTask_15_minute` -> `project.data.klinejob.Kline15MinuteJob`
+- Bean `klineTask_30_minute` -> `project.data.klinejob.Kline30MinuteJob`
+- Bean `klineTask_60_minute` -> `project.data.klinejob.Kline60MinuteJob`
+- Bean `klineTask_4_hour` -> `project.data.klinejob.Kline4HourJob`
+- Bean `klineTask_1_day` -> `project.data.klinejob.Kline1DayJob`
+- Bean `klineTask_1_week` -> `project.data.klinejob.Kline1WeekJob`
+- Bean `klineTask_1_month` -> `project.data.klinejob.Kline1MonJob`
+- Bean `recharegeBonus1DayJob` -> `project.bonus.job.RecharegeBonus1DayJob`
+- Bean `mallOrdersJob` -> `project.mall.task.MallOrdersJob`
+
+## `data/WEB-INF/classes/spring/applicationContext-tip_data.xml`
+- Dubbo interface: `project.tip.TipService`
+- Bean `tipService` -> `project.tip.internal.TipServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-trader_data.xml`
+- Dubbo interface: `project.follow.TraderOrderService`
+- Dubbo interface: `project.follow.TraderUserService`
+- Dubbo interface: `project.follow.TraderService`
+- Dubbo interface: `project.follow.TraderFollowUserService`
+- Dubbo interface: `project.follow.TraderFollowUserOrderService`
+- Bean `traderService` -> `project.follow.internal.TraderServiceImpl`
+- Bean `traderFollowUserService` -> `project.follow.internal.TraderFollowUserServiceImpl`
+- Bean `traderFollowUserOrderService` -> `project.follow.internal.TraderFollowUserOrderServiceImpl`
+- Bean `traderUserService` -> `project.follow.internal.TraderUserServiceImpl`
+- Bean `traderOrderService` -> `project.follow.internal.TraderOrderServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-user_data.xml`
+- Bean `userLoadCacheService` -> `project.user.data.loadcache.UserLoadCacheService`
+- Bean `userService` -> `project.user.internal.UserServiceImpl`
+- Bean `tokenService` -> `project.user.token.internal.TokenServiceImpl`
+- Bean `kycService` -> `project.user.kyc.internal.KycServiceImpl`
+- Bean `kycHighLevelService` -> `project.user.kyc.internal.KycHighLevelServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext-wallet_data.xml`
+- Dubbo interface: `project.wallet.AssetService`
+- Bean `walletService` -> `project.wallet.internal.WalletServiceImpl`
+- Bean `walletLogService` -> `project.wallet.internal.WalletLogServiceImpl`
+- Bean `exchangeRateService` -> `project.wallet.rate.internal.ExchangeRateServiceImpl`
+- Bean `walletLoadCacheService` -> `data.loadcache.WalletLoadCacheService`
+- Bean `walletDao` -> `project.wallet.consumer.WalletDaoImpl`
+- Bean `walletConsumeServer` -> `project.wallet.consumer.WalletConsumeServer`
+- Bean `walletExtendConsumeServer` -> `project.wallet.consumer.WalletExtendConsumeServer`
+- Bean `exchangeRatePullService` -> `project.wallet.rate.job.ExchangeRatePullServiceImpl`
+- Bean `exchangeRatePullJob` -> `project.wallet.rate.job.ExchangeRatePullJob`
+- Bean `assetService` -> `project.wallet.internal.AssetServiceImpl`
+
+## `data/WEB-INF/classes/spring/applicationContext.xml`
+- Bean `sessionFactory` -> `org.springframework.orm.hibernate5.LocalSessionFactoryBean`
+- Bean `transactionManager` -> `org.springframework.orm.hibernate5.HibernateTransactionManager`
+- Bean `transactionInterceptor` -> `org.springframework.transaction.interceptor.TransactionInterceptor`
+- Bean `hibernateTemplate` -> `org.springframework.orm.hibernate5.HibernateTemplate`
+- Bean `namedParameterJdbcTemplate` -> `org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate`
+- Bean `jdbcTemplate` -> `org.springframework.jdbc.core.JdbcTemplate`
