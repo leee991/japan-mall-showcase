@@ -1,0 +1,221 @@
+server {
+    ssl_protocols TLSv1.2 TLSv1.3;
+    include /etc/nginx/snippets/tgshopp-security-headers.conf;
+    include /etc/nginx/snippets/tgshopp-image-rewrites.conf;
+
+    location ^~ /media/mall-test/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin mall-test.s3.amazonaws.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+
+    location ^~ /media/imgtest1/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin imgtest1.s3.amazonaws.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+
+    location ^~ /media/hetao-shop-test/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin hetao-shop-test.s3.amazonaws.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+    location ^~ /media/hetao-shop-test2/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin hetao-shop-test2.s3.amazonaws.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+
+    location ^~ /media/argos-shop-online/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin argos-shop-online.s3.amazonaws.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+
+    location ^~ /media/qwer123456/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin qwer123456.s3.amazonaws.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+
+    location ^~ /media/amazon/ {
+        limit_except GET { deny all; }
+        resolver 127.0.0.53 valid=300s ipv6=off;
+        set $image_origin m.media-amazon.com;
+        proxy_pass https://$image_origin$rootss_image_path;
+        proxy_ssl_server_name on;
+        proxy_ssl_name $image_origin;
+        proxy_ssl_verify on;
+        proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+        proxy_set_header Host $image_origin;
+        proxy_set_header Cookie "";
+        proxy_set_header Authorization "";
+        proxy_set_header Referer "";
+        proxy_set_header Accept-Encoding "";
+        proxy_connect_timeout 10s;
+        proxy_read_timeout 30s;
+        proxy_cache rootss_images;
+        proxy_cache_key "$image_origin$rootss_image_path";
+        proxy_cache_valid 200 30d;
+        proxy_cache_lock on;
+        proxy_cache_use_stale error timeout updating http_500 http_502 http_503 http_504;
+        proxy_hide_header Set-Cookie;
+        expires 7d;
+        add_header X-Image-Cache $upstream_cache_status always;
+        sub_filter off off;
+    }
+
+    server_name mall.example.com;
+    # Temporarily contain confirmed SQL injection in review count endpoint.
+    location = /wap/api/evaluation!countType.action { default_type application/json; return 403 '{"code":"403","msg":"Review statistics temporarily unavailable"}'; }
+    location = /api/evaluation!countType.action { default_type application/json; return 403 '{"code":"403","msg":"Review statistics temporarily unavailable"}'; }
+    location = /promote/api/evaluation!countType.action { default_type application/json; return 403 '{"code":"403","msg":"Review statistics temporarily unavailable"}'; }
+
+    # Quarantined execution endpoints; retain evidence outside web root.
+    location = /admin/.x.jsp { return 404; }
+    location = /admin/codex_diag_merchant_login.jsp { return 404; }
+
+    location ^~ /.well-known/acme-challenge/ { root /var/www/migration-acme; }
+    location ~ ^/img/(rootslogo\.e950f9dd\.png|shoplogo\.5dba109d\.png|target-shop-logo\.png|logo\.4c830710\.png)$ {
+        alias /www/wwwroot/mall/img/$1;
+        default_type image/png;
+        expires -1;
+        include /etc/nginx/snippets/tgshopp-security-headers.conf;
+        add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+    }
+
+    location ^~ /img/ {
+        alias /www/wwwroot/mall/pc/img/;
+        expires 7d;
+        add_header Cache-Control "public, max-age=604800" always;
+    }
+
+    location ~ ^/(tgshop-logo|tgshop-logo-white|tgshop-icon|tgshop-icon-192|favicon)\.png$ {
+        alias /www/wwwroot/mall/$1.png;
+# ... (additional routing rules omitted) ...

@@ -1,0 +1,16 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name mall.example.com;
+    location ^~ /.well-known/acme-challenge/ { root /var/www/migration-acme; }
+    location / { return 301 https://mall.example.com$request_uri; }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name mall.example.com;
+    ssl_certificate /etc/letsencrypt/live/mall.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/mall.example.com/privkey.pem;
+    return 301 https://mall.example.com$request_uri;
+}

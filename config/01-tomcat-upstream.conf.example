@@ -1,0 +1,6 @@
+upstream tomcat_mall {
+    server 127.0.0.1:41879 max_fails=3 fail_timeout=10s;
+    keepalive 64;
+    keepalive_requests 10000;
+    keepalive_timeout 60s;
+}

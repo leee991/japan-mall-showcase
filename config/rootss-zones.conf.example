@@ -1,0 +1,4 @@
+proxy_cache_path /var/cache/nginx/apexa_api_cache levels=1:2 keys_zone=apexa_api_cache:100m inactive=30m max_size=1g;
+proxy_temp_path /var/cache/nginx/apexa_temp;
+limit_req_zone $binary_remote_addr zone=tgshop_icon_limit:10m rate=30r/m;
+limit_conn_zone $binary_remote_addr zone=tgshop_addr_conn:10m;

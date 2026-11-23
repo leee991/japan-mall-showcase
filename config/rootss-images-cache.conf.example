@@ -1,0 +1,7 @@
+proxy_cache_path /var/cache/nginx/rootss_images levels=1:2 keys_zone=rootss_images:30m inactive=90d max_size=20g;
+
+map $request_uri $rootss_image_path {
+    ~^/media/amazon/images/W/[^/]+(/images/.*)$ $1;
+    ~^/media/[^/]+(/.*)$ $1;
+    default /;
+}
